@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/RonaldJcosta/metas#readme",
   "dependencies": {
+    "brace-expansion": "^2.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "minimatch": "^3.0.4",
     "mongodb": "^3.6.3",
     "mongoose": "^5.11.10"
   },
