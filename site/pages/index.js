@@ -1,22 +1,39 @@
 import React from 'react';
+import { Jumbotron, Container, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText } from 'reactstrap'
 import Menu from '../components/Menu'
 
 function Home({ data }) {
     return (
         <>
             <Menu />
-            <h1>Minhas metas!</h1>
-            <hr />
-            {
-                data.metas.map(meta => (
-                    <div key={meta._id} >
-                        <h2> {meta.name} </h2>
-                        <p> {meta.description} </p>
-                        <p> {meta.status} </p>
-                        <hr />
-                    </div>
-                ))
-            }
+            <Jumbotron fluid className="list">
+                <style>
+                    {`.list{
+                        background-color: #D3D3D3;
+                        padding-top: 30px;
+                        padding-bottom: 150px;
+                        margin-bottom: 0rem !important;
+                    }.list-meta {
+                        border-color: #686868 !important;
+                    }`}
+                </style>
+                <Container>
+                    <h1 className="display-4 text-center tittle-top">Minhas metas</h1>
+                    <hr />
+
+                    <ListGroup>
+                        {data.metas.map(meta => (
+                            <div key={meta._id} >
+                                <ListGroupItem className="list-meta" >
+                                    <ListGroupItemHeading> {meta.name} </ListGroupItemHeading>
+                                    <ListGroupItemText> {meta.description} </ListGroupItemText>
+                                    <ListGroupItemText> {meta.status} </ListGroupItemText>
+                                </ListGroupItem>
+                            </div>
+                        ))}
+                    </ListGroup>
+                </Container>
+            </Jumbotron>
         </>
     )
 }

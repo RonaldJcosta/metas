@@ -65,7 +65,6 @@ function Cadastrar() {
                 <style>
                     {`.form{
                         background-color: #D3D3D3;
-                        color: #474a51;
                         padding-top: 30px;
                         padding-bottom: 150px;
                         margin-bottom: 0rem !important;

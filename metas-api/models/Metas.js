@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
-const { Schema } =  mongoose
+const { Schema } = mongoose
 
 const meta = new Schema({
     name: {
-        type: String,
+        type: String
     },
     description: {
         type: String
@@ -11,7 +11,7 @@ const meta = new Schema({
     status: {
         type: String
     }
-}, {
+},{
     timestamps: true
 })
 

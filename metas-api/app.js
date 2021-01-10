@@ -43,13 +43,6 @@ app.get('/metas', async (req, res) => {
 
 app.post('/metas', async (req, res) => {
 
-    await sleep(2000)
-
-    function sleep(ms) {
-        return new Promise((resolve) => {
-            setTimeout(resolve, ms)
-        })
-    }
 
     await Meta.create(req.body, (error) => {
         if(error) return res.status(400).json({

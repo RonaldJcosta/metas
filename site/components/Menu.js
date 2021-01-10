@@ -1,40 +1,42 @@
 import React, { useState } from 'react';
 import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  Container
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    Container
 } from 'reactstrap';
 
 const Menu = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => setIsOpen(!isOpen);
+    const toggle = () => setIsOpen(!isOpen);
 
-  return (
-    <div>
+    return (
+        <div>
 
-      <Navbar color="dark" dark expand="md">
-        <NavbarBrand href="/">Metas</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="/">Listar</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/cadastrar">Cadastrar</NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
+            <Navbar color="dark" dark expand="md">
+                <Container>
+                    <NavbarBrand href="/">Metas</NavbarBrand>
+                    <NavbarToggler onClick={toggle} />
+                    <Collapse isOpen={isOpen} navbar>
+                        <Nav className="mr-auto" navbar>
+                            <NavItem>
+                                <NavLink href="/">Listar</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/cadastrar">Cadastrar</NavLink>
+                            </NavItem>
+                        </Nav>
+                    </Collapse>
+                </Container>
+            </Navbar>
 
-    </div>
-  );
+        </div>
+    );
 }
 
 export default Menu;
